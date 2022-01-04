@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{%block title%}
+Formations
+{%endblock%}
+
+{%block content%}
+{% if all_formations %}
+{% for formation in all_formations %}
+    <div class="card w-75 mb-2" style="margin:5px">
+        <div class="card-body">
+            <h5 class="card-title">
+                {{ formation.name}}
+            </h5>
+            <p class="card-text">
+                {{formation.description}}
+                
+            </p>
+            <span>
+                Date limite: {{formation.date_create}}
+            </span> <hr>
+            <a href="#" class="btn btn-primary">Get this Formation</a>
+        </div>
+    </div>
+
+{%endfor%}
+{%else%}
+<span>No formations available</span>
+{% endif %}
+{%endblock%}

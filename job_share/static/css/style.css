@@ -1,0 +1,58 @@
+/* Color of the links BEFORE scroll */
+.navbar-scroll .nav-link,
+.navbar-scroll .navbar-toggler-icon,
+.navbar-scroll .navbar-brand {
+    color: #262626;
+}
+
+/* Color of the navbar BEFORE scroll */
+.navbar-scroll {
+    background-color: #FFC017;
+}
+
+/* Color of the links AFTER scroll */
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-toggler-icon,
+.navbar-scroll .navbar-brand {
+    color: #262626;
+}
+
+/* Color of the navbar AFTER scroll */
+.navbar-scrolled {
+    background-color: #fff;
+}
+
+/* An optional height of the navbar AFTER scroll */
+.navbar.navbar-scroll.navbar-scrolled {
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+.navbar-brand {
+    font-size: unset;
+    height: 3.5rem;
+}
+
+.job_popular h2{
+    color: #fa5301;
+    font-family: 'lato';
+    font-size: 1.875rem;
+    margin: 0rem 0 2rem 0;
+    padding: 2rem 0 1rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+}
+.last_formation h2{
+    display: block;
+    text-align: center;
+    color: #0ad5ce;
+    font-family: 'lato';
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.875rem;
+    margin: 0;
+    padding: 0 0 1.5rem 0;
+}
