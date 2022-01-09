@@ -9,7 +9,7 @@
 {%block content%}
 <div class="container_register">
     <h1>ContactRegister</h1>
-    <form action="" method ="post">
+    <form method ="post">
         {{ register_form|crispy }} 
         {% csrf_token %}
         <button class="btn btn-primary" type="submit">Register</button>
