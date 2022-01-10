@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from .forms import NewUserForm
-from django.contrib.auth import login
+from django.contrib.auth import login,logout
 from django.contrib import messages
 
 
@@ -23,3 +23,7 @@ def signup(request):
         messages.error(request,"error ")
     form=NewUserForm()
     return render(request,'authentication/register.html',context={"register_form":form})
+
+def signout(request):
+    logout(request)
+    return render(request,'main_app/index.html')

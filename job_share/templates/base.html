@@ -27,9 +27,17 @@
                             Profile
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href={%url 'authentication:signup' %}>Signup</a></li>
-                            <li><a class="dropdown-item" href="#">Signin</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            {% if user.is_authenticated and user.is_user == True %}
+                                {% if and user.is_employer == True %}
+                                    <li><a class="dropdown-item" href={%url 'authentication:signout' %}>Disconnect</a></li>
+                                {%endif%}
+                            
+                                <li><a class="dropdown-item" href={%url 'authentication:signout' %}>Disconnect</a></li>
+                            {%else%}
+                                <li><a class="dropdown-item" href={%url 'authentication:signup' %}>Signup</a></li>
+                                <li><a class="dropdown-item" href="#">Signin</a></li>
+
+                            {%endif%}
                         </ul>
                     </div>
                     <a class="navbar-brand" href="#"><i class="fab fa-linkedin fa-2x"></i></a>
