@@ -2,7 +2,9 @@ from django.shortcuts import render
 from .forms import Job_proposal_forms
 from .models import Job_proposal
 # from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def index(request):
     form=Job_proposal_forms()
     print("test here")
